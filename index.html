@@ -6,7 +6,7 @@
 <main class="stage"><div class="book" id="book"><div class="leaf left" id="left"></div><div class="leaf right" id="right"></div><div class="seam"></div></div></main>
 <div class="works" id="works"></div><div class="controls"><button id="prev" aria-label="上一頁">‹</button><span class="status" id="status"></span><button id="next" aria-label="下一頁">›</button></div><div class="hint">電腦：左右方向鍵翻頁　｜　手機：左右滑動　｜　點擊圖片放大</div><div class="zoom" id="zoom"><button id="close">關閉 ✕</button><img id="zoomimg" alt="放大作品頁"></div>
 <script>
-const imgs=Array.from({length:30},(_,i)=>`pages/${String(i+1).padStart(2,'0')}.jpg`);
+const imgs=Array.from({length:30},(_,i)=>`${String(i+1).padStart(2,'0')}.jpg`);
 const works={6:[['官方網站','https://axianmove-4v9yfxtr.manus.space/']],7:[['觀看短影音','https://www.youtube.com/shorts/fIlpIyEm9rE']],24:[['開啟點點釣魚','https://diandianfsh-wbebkzev.manus.space/']],25:[['聆聽原創歌曲','https://www.youtube.com/watch?v=wcwqYPX2na8']],26:[['觀看 AI 影音','https://www.youtube.com/watch?v=l-50fiuRfvA']],27:[['觀看短影音','https://www.youtube.com/shorts/fIlpIyEm9rE']],28:[['開啟品牌網站','https://axianmove-4v9yfxtr.manus.space/']]};
 const book=document.getElementById('book'),L=document.getElementById('left'),R=document.getElementById('right'),status=document.getElementById('status'),worksBox=document.getElementById('works');let step=0,busy=false;
 const spreads=[[null,0],...Array.from({length:14},(_,i)=>[1+i*2,2+i*2]),[29,null]];
